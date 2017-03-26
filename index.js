@@ -27,8 +27,35 @@ function task6(req, res, next){
 	next();
 };
 
+function task7(req, res, next){
+	var body = req.body;
+	var query = req.query;
+
+	if (_.size(body) > 0) {
+		fs.appendFile('./body.txt', body, 'utf8', function(err){
+			if (err) {
+				console.log(err);
+				return;
+			}
+			console.log('body --- done');
+		});
+	}
+	if (_.size(query) > 0) {
+		fs.appendFile('./query.txt', query, 'utf8', function(err){
+			if (err) {
+				console.log(err);
+				return;
+			}
+			console.log('query --- done');
+		});
+	}
+	console.log(body, query);
+	next();
+};
+
 app.use(task4);
 app.use(task6);
+app.use(task7);
 app.get('/', function(req, res){
 	res.send();
 });

@@ -28,8 +28,8 @@ function task6(req, res, next){
 };
 
 function task7(req, res, next){
-	var body = req.body;
-	var query = req.query;
+	var body = JSON.stringify(req.body);
+	var query = JSON.stringify(req.query);
 
 	if (_.size(body) > 0) {
 		fs.appendFile('./body.txt', body, 'utf8', function(err){

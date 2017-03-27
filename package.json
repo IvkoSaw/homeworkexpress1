@@ -1,7 +1,6 @@
 {
   "name": "homeworkexpress1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,8 +9,19 @@
   "author": "Ivan B.",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "nodemon": "^1.11.0",
     "underscore": "^1.8.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvkoSaw/homeworkexpress1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IvkoSaw/homeworkexpress1/issues"
+  },
+  "homepage": "https://github.com/IvkoSaw/homeworkexpress1#readme",
+  "devDependencies": {},
+  "description": ""
 }
